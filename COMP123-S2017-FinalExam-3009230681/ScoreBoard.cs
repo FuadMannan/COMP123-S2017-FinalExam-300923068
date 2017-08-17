@@ -10,8 +10,7 @@ using System.Windows.Forms;
  * Student ID: 300923068
  * Date: August 17, 2017
  * Description: This is the ScoreBoard class
- * Previous Version: 0.1 - created class (wrong version description)
- * Version: 0.2 - Fix commenting
+ * Version: 0.3 - Corrected UpdateTime method
  */
 
 namespace COMP123_S2017_FinalExam_3009230681
@@ -103,10 +102,11 @@ namespace COMP123_S2017_FinalExam_3009230681
         }
 
         //Methods
-        //Updates 
+        //Updates time property
         public void UpdateTime()
         {
             int currentTime = Convert.ToInt16(TimeTextBox.Text) - 1;
+            this.Time = currentTime;
             string currentTimeStr = currentTime.ToString();
             this.TimeTextBox.Text = currentTimeStr;
         }

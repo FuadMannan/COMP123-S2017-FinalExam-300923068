@@ -15,10 +15,7 @@ using System.Windows.Forms;
  * Date: August 17, 2017
  * StudentID: 300923068
  * Description: This is the PickHighestCardForm
- * Version: 0.2 - Included private and linked public scoreboard prop
- * Fixed reset to change score and time
- * Instantiate scoreboard property in PickHighestCardForm_Load event
- * uncommented scoreboard references
+ * Version: 0.3 - Commenting
  */
 
 namespace COMP123_S2017_FinalExam_3009230681
@@ -126,7 +123,7 @@ namespace COMP123_S2017_FinalExam_3009230681
             {
                 return this._scoreboard;
             }
-            set
+            set //Necessary for constructor method
             {
                 this._scoreboard = value;
             }
