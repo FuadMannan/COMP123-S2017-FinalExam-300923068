@@ -12,10 +12,13 @@ using System.Windows.Forms;
 
 /*
  * Name: Fuad Mannan
- * Date:
- * StudentID:
- * Description:
- * Version:
+ * Date: August 17, 2017
+ * StudentID: 300923068
+ * Description: This is the PickHighestCardForm
+ * Version: 0.2 - Included private and linked public scoreboard prop
+ * Fixed reset to change score and time
+ * Instantiate scoreboard property in PickHighestCardForm_Load event
+ * uncommented scoreboard references
  */
 
 namespace COMP123_S2017_FinalExam_3009230681
@@ -30,7 +33,7 @@ namespace COMP123_S2017_FinalExam_3009230681
         Hand _hand;
         int _maximumPoints;
 
-        private ScoreBoard _scoreboard;
+        private ScoreBoard _scoreboard; //Private scoreboard field
 
         // PUBLIC PROPERTIES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         public List<PictureBox> DealtCardPictureBoxList
@@ -114,6 +117,9 @@ namespace COMP123_S2017_FinalExam_3009230681
             }
         }
 
+        /// <summary>
+        /// Public ScoreBoard property of PickHighestCardForm
+        /// </summary>
         public ScoreBoard ScoreBoard
         {
             get
@@ -214,6 +220,7 @@ namespace COMP123_S2017_FinalExam_3009230681
             this._hideFinalScore();
             UserMessageTextBox.Text = "Click the Deal Button!";
 
+            //Reset Scoreboard time and score
             this.ScoreBoard.Score = 0;
             this.ScoreBoard.Time = 30;
         }

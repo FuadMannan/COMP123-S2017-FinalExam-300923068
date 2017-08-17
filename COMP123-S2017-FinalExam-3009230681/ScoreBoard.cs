@@ -7,9 +7,11 @@ using System.Windows.Forms;
 
 /*
  * Name: Fuad Mannan
+ * Student ID: 300923068
  * Date: August 17, 2017
  * Description: This is the ScoreBoard class
- * Version: 0.1 - Created the Face enum
+ * Previous Version: 0.1 - created class (wrong version description)
+ * Version: 0.2 - Fix commenting
  */
 
 namespace COMP123_S2017_FinalExam_3009230681
@@ -43,7 +45,8 @@ namespace COMP123_S2017_FinalExam_3009230681
                 return this._score;
             }
             set
-            {                
+            {
+                //Sets score value and also ScoreTextBox/FinalScoreTextBox text
                 this._score = value;
                 this.ScoreTextBox.Text = _score.ToString();
                 this.FinalScoreTextBox.Text = _score.ToString();
@@ -68,6 +71,7 @@ namespace COMP123_S2017_FinalExam_3009230681
             }
             set
             {
+                //Sets time value and TimeTextBox text
                 this._time = value;
                 this.TimeTextBox.Text = _time.ToString();
             }
@@ -84,7 +88,7 @@ namespace COMP123_S2017_FinalExam_3009230681
             }
         }
 
-        //METHODS
+        
         /// <summary>
         /// Constructor
         /// </summary>
@@ -98,6 +102,8 @@ namespace COMP123_S2017_FinalExam_3009230681
             this.FinalScoreTextBox = finalScoreTextBox;
         }
 
+        //Methods
+        //Updates 
         public void UpdateTime()
         {
             int currentTime = Convert.ToInt16(TimeTextBox.Text) - 1;
