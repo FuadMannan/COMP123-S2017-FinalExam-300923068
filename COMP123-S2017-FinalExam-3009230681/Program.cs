@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 /*
- * Name:
- * Date:
- * StudentID:
- * Description:
+ * Name: Fuad Mannan
+ * Date: August 8, 2017
+ * StudentID: 300923068
+ * Description: Driver class for program
  * Version:
  */
 
@@ -16,6 +16,8 @@ namespace COMP123_S2017_FinalExam_3009230681
 {
     public static class Program
     {
+        public static PickHighestCardForm pickHighestCardForm;
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -24,7 +26,10 @@ namespace COMP123_S2017_FinalExam_3009230681
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PickHighestCardForm());
+
+            pickHighestCardForm = new PickHighestCardForm();
+
+            Application.Run(new SplashForm());
         }
     }
 }
